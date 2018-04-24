@@ -30,7 +30,7 @@ body {
 
 .ari-navbar a {
     text-decoration: none;
-    font-size: 2.2vw;
+    /* font-size: 2.2vw; */
     color: dimgrey;
     padding-right: 10px; 
 }
@@ -89,12 +89,12 @@ body {
 }
 
 .ari-profile h1 {
-    font-size: 5vw;
+    /* font-size: 50px; */
     font-weight: 600;
 }
 
 .ari-profile p {
-    font-size: 3vw;
+    /* font-size: 30px; */
     font-weight: 300;
 }
 
@@ -104,13 +104,49 @@ body {
     text-align: center;
 }
 
-.social-media i {
+/* .social-media i {
     font-size: 3vw;
-}
+} */
 
 .social-media a {
     text-decoration: none;
     color: dimgrey;
+}
+
+@media (min-width: 576px){
+    .ari-container {
+        max-width: 540px;
+    }
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px){
+    .ari-container {
+        max-width: 720px;
+    }
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px){
+    .ari-container {
+        max-width: 960px;
+    }
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px){
+    .ari-container {
+        max-width: 1140px;
+    }
+    html {
+        font-size: 30px;
+    }
 }
 
 @media only screen and (max-width: 768px){
