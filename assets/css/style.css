@@ -52,6 +52,9 @@ body {
     .ari-container {
         max-width: 540px;
     }
+    .ari-navbar {
+        text-align: center;
+    }
 }
 
 @media (min-width: 768px){
