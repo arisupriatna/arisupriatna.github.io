@@ -18,8 +18,9 @@
 
 <body id="color">
   <nav class="ari-navbar">
-    <a href="http://explorecode.tk/" target="_blank">Blog</a>
-    <a href="http://explorecode.tk/about-us/about-us.html" target="_blank">About Me</a>
+    <a href="http://explorecode.tk/" target="_blank" id="blog">Blog</a>
+    <a href="http://explorecode.tk/about-us/about-us.html" target="_blank" id="about">About Me</a>
+    <a href="#" onclick="changeColor()" id="ubahWarna">Change Color</a>
     <br>
     <br>
   </nav>
@@ -28,26 +29,26 @@
 
     <div class="ari-profile">
       <img src="https://raw.githubusercontent.com/arisupriatna14/firebase-hosting/master/public/assets/img/img-ari.jpg" alt="image-profile">
-      <h1>Hi, I'm Ari Supriatna</h1>
-      <p>Students at Hacktiv8 Indonesia</p>
+      <h1 class="ubahWarna">Hi, I'm Ari Supriatna</h1>
+      <p class="pWarna">Students at Hacktiv8 Indonesia</p>
 
       <br>
 
-      <div class="social-media">
+      <div class="social-media" >
         <!--Facebook-->
-        <a href="https://www.facebook.com/profile.php?id=100010804383796">
+        <a href="https://www.facebook.com/profile.php?id=100010804383796" id="socialFacebook">
           <i class="fa fa-facebook fa-lg fa-2x"> </i>
         </a>
         <!--Instagram-->
-        <a class="ins-ic text-white" href="https://www.instagram.com/arisupriatna1408/">
+        <a class="ins-ic text-white" href="https://www.instagram.com/arisupriatna1408/" id="socialInstagram">
           <i class="fa fa-instagram fa-lg mr-md-5 mr-3 fa-2x"> </i>
         </a>
         <!-- github -->
-        <a class="text-white" href="https://github.com/arisupriatna14" target="_blank">
+        <a class="text-white" href="https://github.com/arisupriatna14" target="_blank" id="socialGithub">
           <i class="fa fa-github fa-lg mr-md-5 mr-3 fa-2x"></i>
         </a>
         <!--Linkedin-->
-        <a class="li-ic text-white" href="git config --global --unset user.emailgit config --global --unset-all" target="_blank">
+        <a class="li-ic text-white" href="git config --global --unset user.emailgit config --global --unset-all" target="_blank" id="socialLinkedin">
           <i class="fa fa-linkedin fa-lg mr-md-5 mr-3 fa-2x"> </i>
         </a>
         <br>
@@ -60,18 +61,38 @@
 
   <script>
     var container = document.querySelector("#color");
+    var colorH1 = document.querySelector(".ubahWarna");
+    var colorP = document.querySelector(".pWarna");
+    var colorAbout = document.querySelector("#about");
+    var colorBlog = document.querySelector("#blog");
+    var ubahWarna = document.querySelector('#ubahWarna')
+    var socialFacebook = document.querySelector('#socialFacebook')
+    var socialGithub = document.querySelector("#socialGithub")
+    var socialInstagram = document.querySelector("#socialInstagram")
+    var socialLinkedin = document.querySelector("#socialLinkedin")
+
     var zeros = "0000000";
  
-    container.addEventListener("click", changeColor, false);
+    //container.addEventListener("click", changeColor, false);
  
     function changeColor(e) {
         var color = "#" + Math.floor(Math.random() * 0xFFFFFF).toString(16);
         var colorLength = color.length;
+        
  
         if (colorLength < 7) {
           color += zeros.substring(0, zeros.length - colorLength);
         }
         container.style.backgroundColor = color;
+        colorH1.style.color = "#FFFF"
+        colorP.style.color = "#FFF"
+        colorAbout.style.color = "#FFFF"
+        colorBlog.style.color = "#FFFF"
+        ubahWarna.style.color = '#FFFF'
+        socialFacebook.style.color = '#FFFF'
+        socialGithub.style.color = '#FFFF'
+        socialInstagram.style.color = '#FFFF'
+        socialLinkedin.style.color = '#FFFF'
     }
   </script>
 </body>
