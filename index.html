@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="https://ariellemcgill.files.wordpress.com/2018/03/unnamed.png" type="image/png">
 </head>
 
-<body>
+<body id="color">
   <nav class="ari-navbar">
     <a href="http://explorecode.tk/" target="_blank">Blog</a>
     <a href="http://explorecode.tk/about-us/about-us.html" target="_blank">About Me</a>
@@ -57,6 +57,23 @@
     </div>
     <!-- ari-profile -->
   </div>
+
+  <script>
+    var container = document.querySelector("#color");
+    var zeros = "0000000";
+ 
+    container.addEventListener("click", changeColor, false);
+ 
+    function changeColor(e) {
+        var color = "#" + Math.floor(Math.random() * 0xFFFFFF).toString(16);
+        var colorLength = color.length;
+ 
+        if (colorLength < 7) {
+          color += zeros.substring(0, zeros.length - colorLength);
+        }
+        container.style.backgroundColor = color;
+    }
+  </script>
 </body>
 
 </html>
